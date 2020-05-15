@@ -1,6 +1,6 @@
 import React from 'react'
 import './labsDistribuidos.scss'
-import labsPc from '../../images/illustrations/labsPC.svg'
+import labsPc from '../../images/illustrations/LabsPC.svg'
 const labsDistribuidos = () => (
   <section>
     <div style={{ fontFamily: "'Spartan', sans-serif", marginTop: '65px', marginBottom: '60px' }} className="container">

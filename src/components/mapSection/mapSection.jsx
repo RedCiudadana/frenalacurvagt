@@ -1,5 +1,5 @@
 import React from 'react'
-import MapaLaptop from '../../images/illustrations/Mapa_laptop.png'
+import MapaLaptop from '../../images/illustrations/Mapa_Laptop.png'
 import './mapSection.scss'
 import MapaMexico from '../../images/illustrations/Mapa_Mexico.svg'
 const MapSection = () => (
