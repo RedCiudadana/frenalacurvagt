@@ -8,7 +8,7 @@ const MainHero = () => (
       <div className="columns is-vcentered">
         <div className="column is-7 is-offset-1">
           <figure className="image">
-            <img src={frenaLaCurvaImg} alt="Frena La Curva México" />
+            <img src={frenaLaCurvaImg} alt="Frena La Curva Guatemala" />
           </figure>
         </div>
         <div className="column is-3 landing-caption">
@@ -16,17 +16,17 @@ const MainHero = () => (
             Frena <br />
             la curva
             <br />
-            México
+            Guatemala
           </h1>
           <h2 className="subtitle is-5 is-muted">
             Guía de iniciativas ciudadanas frente al coronavirus (COVID-19), innovación social y resiliencia cívica en
             tiempos de pandemia.
           </h2>
           <div className="button-wrap">
-            <a href="http://mx.frenalacurva.net" className="button cta is-rounded">
+            <a href="https://ca.mapa.frenalacurva.net" className="button cta is-rounded">
               ACTÚA
             </a>
-            <a href="/mapa" className="button cta is-rounded primary-btn raised">
+            <a href="https://ca.mapa.frenalacurva.net/" className="button cta is-rounded primary-btn raised">
               MAPA
             </a>
           </div>
