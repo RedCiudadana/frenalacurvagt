@@ -26,7 +26,9 @@ const TwitterBox = () => {
           </div>
         </div>
         <div className="columns is-vcentered app-side has-text-centered" style={{ marginTop: '10px' }}>
-          <SocialBox color="red" size="medium" style={{ margin: 'auto' }} />
+          <div style={{ margin: 'auto' }}>
+            <SocialBox color="red" size="medium" />
+          </div>
         </div>
       </div>
     </section>
