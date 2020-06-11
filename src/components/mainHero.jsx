@@ -8,11 +8,16 @@ const MainHero = () => (
       <div className="columns is-vcentered">
         <div className="column is-7 is-offset-1">
           <figure className="image">
-            <img src={frenaLaCurvaImg} alt="Frena La Curva guatemala" />
+            <img src={frenaLaCurvaImg} alt="Frena La Curva Guatemala" />
           </figure>
         </div>
         <div className="column is-3 landing-caption">
-          <h1 className="title is-1 is-bold is-spaced">¡Hola!</h1>
+          <h1 className="title is-1 is-bold is-spaced">
+            Frena <br />
+            la curva
+            <br />
+            Guatemala
+          </h1>
           <h2 className="subtitle is-5 is-muted">
             Te damos la bienvenida a FrenalaCurvaGuatemala una iniciativa de movilización ciudadana para apoyarnos entre
             todos durante la cuarentena del Covid-19.
