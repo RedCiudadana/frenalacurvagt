@@ -10,9 +10,9 @@ import fbLogoRed from '../../images/logos/FLC-MX_Facebook_red.svg'
 import igLogoRed from '../../images/logos/FLC-MX_Instagram_red.svg'
 import twLogoRed from '../../images/logos/FLC-MX_Twitter_red.svg'
 
-const facebookURL = 'https://www.facebook.com/frenalacurvamx/'
-const instagramURL = 'https://www.instagram.com/frenalacurvamx/'
-const twitterURL = 'https://twitter.com/frenalacurvamx'
+const facebookURL = 'https://www.facebook.com/Frenalacurvagt'
+const instagramURL = 'https://www.instagram.com/frenalacurvagt/'
+const twitterURL = 'https://twitter.com/Frenalacurvagt'
 
 const variants = {
   color: { red: 'red' },

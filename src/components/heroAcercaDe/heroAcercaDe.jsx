@@ -17,27 +17,29 @@ export default function HeroAcercaDe() {
                     src={logoSquareWhite}
                     width={360}
                     height={450}
-                    alt="Logo Frena la curva México"
+                    alt="Logo Frena la curva guatemala"
                   />
                 </figure>
               </div>
               <div className="column is-7">
                 <div className="content">
-                  <h1 className="title is-size-1">#FrenaLaCurvaMX</h1>
-                  <h2 className="subtitle is-size-3">
+                  <h1 className="title is-size-1">¿Qué es frena la curva?</h1>
+                  {/* <h2 className="subtitle is-size-3">
                     RED CIUDADANA DE SOLIDARIDAD, de cuidados, información, inovación social y resiliencia cívica
                     contral el #COVID19
-                  </h2>
+                  </h2> */}
                   <p>
-                    Somos una plataforma ciudadana donde personas voluntarias, emprendedoras, activistas, organizaciones
-                    sociales, makers y laboratorios de innovación pública y abierta, estamos cooperando para canalizar y
-                    organizar la energía social y la resiliencia cívica frente a la pandemia del Covid-19 (coronavirus)
-                    dando una respuesta desde la sociedad civil complementaria a la del gobierno y los servicios
-                    públicos esenciales.
+                    Frena la curva es el repositorio de iniciativas ciudadanas iniciado en España frente al coronavirus,
+                    que busca reunir innovación social y resiliencia cívica en tiempos de pandemia
+                    <a className="has-text-white has-text-weight-bold" href="www.frenalacurva.net">
+                      www.frenalacurva.net
+                    </a>
                   </p>
                   <p>
-                    Frena la Curva nace en España durante los días previos al confinamiento, y en simultánea en otros
-                    países, entre ellos México, nos auto organizamos para replicar la plataforma.
+                    Diversos países de América Latina y Europa se han ido agrupando para replicar esta experiencia,
+                    desarrollando sus propias plataformas, las cuales responden a las necesidades específicas de cada
+                    territorio y son gestionadas por equipos locales, manteniendo canales de comunicación y colaboración
+                    entre países. Así nace la Red Internacional Frena la curva.
                   </p>
                 </div>
               </div>

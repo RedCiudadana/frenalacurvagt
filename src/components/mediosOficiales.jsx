@@ -1,8 +1,8 @@
 import React from 'react'
 
-import logoAnimalPolitico from '../images/logos/animal_politico.svg'
-import covid19Casos from '../images/illustrations/COVID-19_Outbreak_Cases_in_Mexico.wikipedia.svg'
-import gobMXLogo from '../images/logos/gob_mx.svg'
+import logoOcote from '../images/logos/ocote.png'
+import logoGobiernoGuatemala from '../images/logos/gobierno-guatemala.png'
+import logoFatica from '../images/logos/fatica.png'
 
 const MediosOficiales = () => (
   <section className="section has-bg-blue-grey section-feature-grey initiatives">
@@ -26,52 +26,39 @@ const MediosOficiales = () => (
         <br />
       </div>
       <div className="columns is-variable is-8">
-        <div className="column mb-20">
-          <a
-            target="_blank"
-            title="Animal Político, noticias verificadas"
-            href="https://www.animalpolitico.com/noticias-coronavirus-covid-2019-verificacion/"
-            rel="noopener noreferrer"
-          >
+        <div className="column mb-20 has-text-centered">
+          <a target="_blank" title="Agencia Ocote" href="https://www.agenciaocote.com/" rel="noopener noreferrer">
             <br />
-            <img alt="Logotipo de Animal Político" style={{ maxHeight: '100px' }} src={logoAnimalPolitico} />
+            <img alt="Logotipo de Ocote" style={{ maxHeight: '100px' }} src={logoOcote} />
             <br />
             <br />
-            <h4 className="subtitle is-extra-padded has-text-light is-3 has-text-centered">Animal Político</h4>
-            <p className="has-text-light has-text-centered is-4">
-              Información útil y verificada sobre el Coronavirus en México.
-            </p>
+            <h4 className="subtitle is-extra-padded has-text-light is-5 has-text-centered">Agencia Ocote</h4>
           </a>
         </div>
-        <div className="column mb-20">
+        <div className="column mb-20 has-text-centered">
           <a
             target="_blank"
-            title="Mapa en tiempo real del coronavirus en México"
-            href="https://covid19enmexico.com/"
+            title="Mapa en tiempo real del coronavirus en Guatemala"
+            href="http://covid19.gob.gt/index.html"
             rel="noopener noreferrer"
           >
-            <img alt="Mapa del coronavirus en México" style={{ maxHeight: '128px' }} src={covid19Casos} />
-            <h4 className="subtitle is-extra-padded has-text-light is-3 has-text-centered">
-              Mapa de Casos de Coronavirus
+            <img alt="Mapa del coronavirus en Guatemala" style={{ maxHeight: '128px' }} src={logoGobiernoGuatemala} />
+            <h4 className="subtitle is-extra-padded has-text-light is-5 has-text-centered">
+              Situación del COVID-19 en Guatemala
             </h4>
-            <p className="has-text-light has-text-centered is-4">
-              Actualización en tiempo real de los casos en México.
-            </p>
           </a>
         </div>
-        <div className="column mb-20">
+        <div className="column mb-20 has-text-centered">
           <a
             target="_blank"
-            title="Información oficial del Gobierno de México"
-            href="https://coronavirus.gob.mx/"
+            title="Fática - Agencia Ocote"
+            href="https://www.agenciaocote.com/proyectos/factica/"
             rel="noopener noreferrer"
           >
-            <br />
-            <img alt="Logotipo del Gobierno de México" style={{ maxHeight: '100px' }} src={gobMXLogo} />
-            <br />
-            <br />
-            <h4 className="subtitle is-extra-padded has-text-light is-3 has-text-centered">Gobierno de México</h4>
-            <p className="has-text-light has-text-centered is-4">Sitio oficial del Coronavirus en México.</p>
+            <img alt="Logotipo de Fática" style={{ maxHeight: '128px' }} src={logoFatica} />
+            <h4 className="subtitle is-extra-padded has-text-light is-5 has-text-centered">
+              Plataforma de verificación del discurso público, fact-checking y detección de bulos
+            </h4>
           </a>
         </div>
       </div>

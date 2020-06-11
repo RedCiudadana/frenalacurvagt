@@ -9,7 +9,7 @@ const Footer = () => (
     className="footer footer-dark fullBox diagonalBox has-text-white"
     // TODO: Move these rules into a better implementation
     style={{
-      backgroundColor: 'white',
+      backgroundColor: '#fbfbfb',
       fontFamily: "'Roboto', sans-serif",
     }}
   >
@@ -24,18 +24,18 @@ const Footer = () => (
                 marginTop: '60px',
               }}
               src={logoImg}
-              alt="logo frena la curva méxico"
+              alt="logo frena la curva guatemala"
             />
           </div>
         </div>
         <div style={{ marginTop: 'auto' }} className="column is-two-fifths">
           <div className="footer-column">
             <div className="footer-header">
-              <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '2px' }}>mexico.frenalacurva.net</h3>
+              <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '2px' }}>Guatemala.frenalacurva.net</h3>
             </div>
             <p style={{ fontSize: '14px' }}>
-              Mexico.FrenaLaCurva.net una red de apoyo de personas voluntarias que conecta esfuerzos de y acciones
-              ciudadanas para aplanar la curva y mitigar los efectos del COVID-19 en México. Forma parte de{' '}
+              Guatemala.FrenaLaCurva.net una red de apoyo de personas voluntarias que conecta esfuerzos de y acciones
+              ciudadanas para aplanar la curva y mitigar los efectos del COVID-19 en guatemala. Forma parte de{' '}
               <a className="has-text-white has-text-weight-bold" href="http://frenalacurva.net/">
                 FrenaLaCurva.Net
               </a>{' '}
@@ -65,16 +65,13 @@ const Footer = () => (
           <a className="has-text-white level-item" href="/">
             INICIO
           </a>
-          <a className="has-text-white level-item" href="https://mx.frenalacurva.net/">
-            FORO
-          </a>
-          <a className="has-text-white level-item" href="/mapa">
+          <a className="has-text-white level-item" href="https://ca.mapa.frenalacurva.net/views/map">
             MAPA
           </a>
         </div>
         <div className="level-right">
-          <a className="has-text-white level-item" href="https://www.facebook.com/frenalacurvamx/">
-            FRENA LA CURVA MÉXICO © 2020
+          <a className="has-text-white level-item" href="https://www.facebook.com/Frenalacurvagt">
+            FRENA LA CURVA guatemala © 2020
           </a>
         </div>
       </div>

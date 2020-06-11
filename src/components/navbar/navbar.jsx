@@ -22,7 +22,7 @@ export default function Navbar() {
         <nav className="navbar Navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
-              <img className="Navbar-logo" src={FLCLogo} alt="Logotipo de Frena la curva México" />
+              <img className="Navbar-logo" src={FLCLogo} alt="Logotipo de Frena la curva guatemala" />
             </Link>
             <a
               role="button"
@@ -37,25 +37,7 @@ export default function Navbar() {
             </a>
           </div>
           <div className={`navbar-menu is-shadowless ${isActiveClassnName}`}>
-            <div className="navbar-start"></div>
-            <div className="navbar-end">
-              <Link
-                className="navbar-item is-uppercase"
-                activeClassName={activeClassName}
-                to="/"
-                onClick={toggleActive}
-              >
-                Inicio
-              </Link>
-              <a
-                className="navbar-item is-uppercase"
-                href="https://mx.frenalacurva.net/"
-                onClick={toggleActive}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Foro
-              </a>
+            <div className="navbar-start">
               <Link
                 className="navbar-item is-uppercase"
                 activeClassName={activeClassName}
@@ -72,14 +54,16 @@ export default function Navbar() {
               >
                 Quiénes somos
               </Link>
-              <Link
+              {/* <Link
                 className="navbar-item is-uppercase"
                 activeClassName={activeClassName}
-                to="/labs"
+                to="/quienes-somos"
                 onClick={toggleActive}
               >
-                Labs
-              </Link>
+                Contacto
+              </Link> */}
+            </div>
+            <div className="navbar-end">
               <SocialBox className="navbar-item" onClick={toggleActive} />
             </div>
           </div>
