@@ -467,6 +467,8 @@ class ContactanosPage extends React.Component {
                     method="post"
                     style={{ display: 'grid', textAlign: 'left' }}
                     className="contactForm"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
                   >
                     <input type="hidden" name="form-name" value="contact" />
                     <label htmlFor="nombre">Nombre</label>
