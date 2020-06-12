@@ -472,9 +472,9 @@ class ContactanosPage extends React.Component {
                   >
                     <input type="hidden" name="form-name" value="contact" />
                     <label htmlFor="nombre">Nombre</label>
-                    <input type="text" id="nombre" required={true} />
+                    <input type="text" id="nombre" name="nombre" required={true} />
                     <label htmlFor="correo">Correo electrónico</label>
-                    <input type="email" id="correo" required={true} />
+                    <input type="email" id="correo" name="correo" required={true} />
                     <label htmlFor="telefono">Teléfono</label>
                     <input
                       type="tel"
