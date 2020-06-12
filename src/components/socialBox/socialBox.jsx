@@ -5,14 +5,14 @@ import classnames from 'classnames'
 import './socialBox.scss'
 import fbLogoWhite from '../../images/logos/FLC-MX_Facebook.svg'
 import igLogoWhite from '../../images/logos/FLC-MX_Instagram.svg'
-import twLogoWhite from '../../images/logos/FLC-MX_Twitter.svg'
+// import twLogoWhite from '../../images/logos/FLC-MX_Twitter.svg'
 import fbLogoRed from '../../images/logos/FLC-MX_Facebook_red.svg'
 import igLogoRed from '../../images/logos/FLC-MX_Instagram_red.svg'
-import twLogoRed from '../../images/logos/FLC-MX_Twitter_red.svg'
+// import twLogoRed from '../../images/logos/FLC-MX_Twitter_red.svg'
 
 const facebookURL = 'https://www.facebook.com/Frenalacurvagt'
 const instagramURL = 'https://www.instagram.com/frenalacurvagt/'
-const twitterURL = 'https://twitter.com/Frenalacurvagt'
+// const twitterURL = 'https://twitter.com/Frenalacurvagt'
 
 const variants = {
   color: { red: 'red' },
@@ -22,7 +22,7 @@ const variants = {
 export default function SocialBox({ className, onClick, color, size }) {
   const fbLogo = color === variants.color.red ? fbLogoRed : fbLogoWhite
   const igLogo = color === variants.color.red ? igLogoRed : igLogoWhite
-  const twLogo = color === variants.color.red ? twLogoRed : twLogoWhite
+  // const twLogo = color === variants.color.red ? twLogoRed : twLogoWhite
 
   const classes = classnames('SocialBox', className, {
     [`SocialBox--${size}`]: size && size,
@@ -40,7 +40,7 @@ export default function SocialBox({ className, onClick, color, size }) {
       >
         <img className="SocialBox-image" src={fbLogo} alt="Facebook" />
       </a>
-      <a
+      {/* <a
         href={twitterURL}
         className="SocialBox-link"
         target="_blank"
@@ -49,7 +49,7 @@ export default function SocialBox({ className, onClick, color, size }) {
         onClick={onClick}
       >
         <img className="SocialBox-image" src={twLogo} alt="Twitter" />
-      </a>
+      </a> */}
       <a
         href={instagramURL}
         className="SocialBox-link"

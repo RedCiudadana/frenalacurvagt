@@ -3,6 +3,7 @@ import SocialBox from '../socialBox/socialBox'
 import './footer.scss'
 
 import logoImg from '../../images/logos/logo_footer.png'
+import logoRedCiudadana from '../../images/logos/logo-rc-white.png'
 
 const Footer = () => (
   <footer
@@ -70,9 +71,28 @@ const Footer = () => (
           </a>
         </div>
         <div className="level-right">
-          <a className="has-text-white level-item" href="https://www.facebook.com/Frenalacurvagt">
+          <a className="has-text-white" href="https://www.facebook.com/Frenalacurvagt">
             FRENA LA CURVA guatemala © 2020
           </a>
+        </div>
+      </div>
+      <div className="level Footer-navbar">
+        <div className="level-left">
+          <p className="has-text-white level-item">
+            Un proyecto con el apoyo de
+            <a href="https://redciudadana.org/">
+              <img
+                style={{
+                  height: '40px',
+                  width: 'auto',
+                  marginLeft: '10px',
+                  marginRight: '10px',
+                }}
+                src={logoRedCiudadana}
+                alt="Logo de Red Ciudadana"
+              />
+            </a>
+          </p>
         </div>
       </div>
     </div>
