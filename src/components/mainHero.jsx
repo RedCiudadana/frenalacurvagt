@@ -28,7 +28,7 @@ const MainHero = () => (
               MAPA
             </a>
           </div>
-          <p className="mt-20">
+          <p className="subtitle mt-20">
             Vista nuestro mapa y usalo para:
             <ul className="list-circle-arrow">
               <li>Solicitar apoyo a personas de tu comunidad.</li>
