@@ -4,6 +4,9 @@ import './footer.scss'
 
 import logoImg from '../../images/logos/logo_footer.png'
 import logoRedCiudadana from '../../images/logos/logo-rc-white.png'
+import logoFacebook from '../../images/logos/icon-fb-white.png'
+import logoInstagram from '../../images/logos/icon-in-white.png'
+import logoTwitter from '../../images/logos/icon-tw-white.png'
 
 const Footer = () => (
   <footer
@@ -83,13 +86,49 @@ const Footer = () => (
             <a href="https://redciudadana.org/">
               <img
                 style={{
-                  height: '40px',
+                  height: '35px',
                   width: 'auto',
                   marginLeft: '10px',
                   marginRight: '10px',
                 }}
                 src={logoRedCiudadana}
                 alt="Logo de Red Ciudadana"
+              />
+            </a>
+            <a href="https://www.facebook.com/Redciudadanagt/">
+              <img
+                style={{
+                  height: '40px',
+                  width: 'auto',
+                  marginLeft: '10px',
+                  marginRight: '10px',
+                }}
+                src={logoFacebook}
+                alt="Logo de Facebook"
+              />
+            </a>
+            <a href="https://twitter.com/RedxGuate">
+              <img
+                style={{
+                  height: '40px',
+                  width: 'auto',
+                  marginLeft: '10px',
+                  marginRight: '10px',
+                }}
+                src={logoTwitter}
+                alt="Logo de Twitter"
+              />
+            </a>
+            <a href="https://www.instagram.com/redxguate/">
+              <img
+                style={{
+                  height: '40px',
+                  width: 'auto',
+                  marginLeft: '10px',
+                  marginRight: '10px',
+                }}
+                src={logoInstagram}
+                alt="Logo de Instagram"
               />
             </a>
           </p>

@@ -52,7 +52,7 @@ const QuienesSomos = () => (
               </p>
               <p>
                 Puedes ingresar tu iniciativa{' '}
-                <a className="has-text-red has-text-weight-bold" href="www.frenalacurva.net">
+                <a className="has-text-red has-text-weight-bold" href="https://ca.mapa.frenalacurva.net/views/map">
                   directamente en el mapa
                 </a>{' '}
                 {/* o contactarnos aqui. */}
