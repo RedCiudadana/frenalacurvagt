@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import SocialBox from '../socialBox/socialBox'
 import './navbar.scss'
-import FLCLogo from '../../images/logos/FLC-MX_Logo_Horizontal.svg'
+import FLCLogo from '../../images/logos/logo-frena.png'
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false)
@@ -38,14 +38,13 @@ export default function Navbar() {
           </div>
           <div className={`navbar-menu is-shadowless ${isActiveClassnName}`}>
             <div className="navbar-start">
-              <Link
-                className="navbar-item is-uppercase"
-                activeClassName={activeClassName}
-                to="/mapa"
-                onClick={toggleActive}
+              <a
+                aria-label="menu"
+                href="https://ca.mapa.frenalacurva.net/views/map"
+                className={'navbar-item is-uppercase'}
               >
                 Mapa
-              </Link>
+              </a>
               <Link
                 className="navbar-item is-uppercase"
                 activeClassName={activeClassName}

@@ -1,14 +1,8 @@
-<p align="center">
-<img src="http://codeandomexico.org/resources/img/codeandomexico.png" width="500" alt="Codeando México"><br>
-<a href="http://www.codeandomexico.org/" target="_blank"><img src="https://img.shields.io/badge/website-CodeandoMexico-00D88E.svg"></a>
-<a href="http://slack.codeandomexico.org/" target="_blank"><img src="https://img.shields.io/badge/slack-CodeandoMexico-EC0E4F.svg"></a>
-</p>
-
-# Frena La Curva México - Landing page
+# Frena La Curva Guatemala - Landing page
 
 ![demo](demo.png)
 
-Este repositorio contiene la landing page para México trabajando con <frenalacurva.net>.
+Este repositorio contiene la landing page para Gautemala trabajando con <frenalacurva.net>.
 
 Puedes ver el demo [aquí](mexico.frenalacurva.net).
 

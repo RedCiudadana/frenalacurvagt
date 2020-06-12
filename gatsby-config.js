@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Frena la curva México`,
-    description: `Guía de iniciativas ciudadanas frente al COVID19 para visibilizar, difundir y multiplicar el impacto de proyectos e iniciativas que han brotado en México`,
-    author: `Codeando México`,
+    title: `Frena la curva Guatemala`,
+    description: `Guía de iniciativas ciudadanas frente al COVID19 para visibilizar, difundir y multiplicar el impacto de proyectos e iniciativas que han brotado en Guatemala`,
+    author: `RedCiudadana`,
   },
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trakingId: `UA-163168776-1`,
+        trakingId: `UA-129113306-3`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -25,7 +25,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
-        short_name: `FrenaLaCurvaMX`,
+        short_name: `FrenaLaCurvaGT`,
         start_url: `/`,
         background_color: `#E83F4E`,
         theme_color: `#E83F4E`,

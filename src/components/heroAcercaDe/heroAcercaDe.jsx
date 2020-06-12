@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './heroAcercaDe.scss'
-import logoSquareWhite from '../../images/illustrations/FLC-MX_QuienesSomos_Logo.cuadrado.white.svg'
+import logoSquareWhite from '../../images/logos/logo_footer.png'
 
 export default function HeroAcercaDe() {
   return (
@@ -32,7 +32,7 @@ export default function HeroAcercaDe() {
                     Frena la curva es el repositorio de iniciativas ciudadanas iniciado en España frente al coronavirus,
                     que busca reunir innovación social y resiliencia cívica en tiempos de pandemia
                     <a className="has-text-white has-text-weight-bold" href="www.frenalacurva.net">
-                      www.frenalacurva.net
+                      &nbsp;www.frenalacurva.net
                     </a>
                   </p>
                   <p>

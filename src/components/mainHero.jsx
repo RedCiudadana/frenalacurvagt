@@ -44,7 +44,7 @@ const MainHero = () => (
           <h2>
             ¡Inscríbete al <strong>voluntariado</strong> y ayúdanos a frenar la curva!
           </h2>
-          <a href="/mapa" className="button cta is-rounded primary-btn raised is-uppercase mt-20">
+          <a href="/contactanos" className="button cta is-rounded primary-btn raised is-uppercase mt-20">
             Quiero unirme
           </a>
         </div>

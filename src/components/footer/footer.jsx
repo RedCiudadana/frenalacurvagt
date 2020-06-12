@@ -2,7 +2,7 @@ import React from 'react'
 import SocialBox from '../socialBox/socialBox'
 import './footer.scss'
 
-import logoImg from '../../images/logos/logo_footer.svg'
+import logoImg from '../../images/logos/logo_footer.png'
 
 const Footer = () => (
   <footer
@@ -31,10 +31,10 @@ const Footer = () => (
         <div style={{ marginTop: 'auto' }} className="column is-two-fifths">
           <div className="footer-column">
             <div className="footer-header">
-              <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '2px' }}>Guatemala.frenalacurva.net</h3>
+              <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '2px' }}>frenalacurva.org.gt</h3>
             </div>
             <p style={{ fontSize: '14px' }}>
-              Guatemala.FrenaLaCurva.net una red de apoyo de personas voluntarias que conecta esfuerzos de y acciones
+              frenalacurva.org.gt una red de apoyo de personas voluntarias que conecta esfuerzos de y acciones
               ciudadanas para aplanar la curva y mitigar los efectos del COVID-19 en guatemala. Forma parte de{' '}
               <a className="has-text-white has-text-weight-bold" href="http://frenalacurva.net/">
                 FrenaLaCurva.Net
