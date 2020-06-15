@@ -402,26 +402,53 @@ const municipios = {
   ],
 }
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+
 class ContactanosPage extends React.Component {
   constructor() {
     super()
-    this.state = { value: null, municipios: [] }
-
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = {
+      value: null,
+      municipios: [],
+      nombre: '',
+      correo: '',
+      telefono: '',
+      horas: '',
+      medioContactoPreferido: '',
+      departamento: null,
+      municipio: '',
+      frecuenciaRevisarRedesSociles: '',
+      redSocialMasUsada: '',
+    }
   }
 
-  handleSubmit() {
-    // jaja
+  handleSubmit = e => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...this.state }),
+    })
+      .then(() => {
+        this.setState({
+          formMessageResult: 'Gracias! El formulario se envió correctamente',
+        })
+      })
+      .catch(() => {
+        this.setState({
+          formMessageResult: 'Error al enviar formulario, por favor intenta más tarde',
+        })
+      })
+
+    e.preventDefault()
   }
 
-  handleChange(event) {
-    console.log('change value', event.target.value)
-    this.setState({ value: event.target.value })
-  }
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   render() {
-    console.log('render')
     const departamentoOptions = departamentos.map(departamento => {
       return (
         <option key={departamento} value={departamento}>
@@ -430,9 +457,12 @@ class ContactanosPage extends React.Component {
       )
     })
 
+    console.log('options municipios')
     let municipioOptions = []
-    if (this.state.value !== null) {
-      municipioOptions = municipios[this.state.value].map(municipio => {
+    if (this.state.departamento !== null && this.state.departamento !== undefined && this.state.departamento !== '') {
+      console.log('options municipios accepted')
+      console.log(this.state)
+      municipioOptions = municipios[this.state.departamento].map(municipio => {
         return (
           <option key={municipio} value={municipio}>
             {municipio}
@@ -440,6 +470,16 @@ class ContactanosPage extends React.Component {
         )
       })
     }
+
+    let {
+      nombre,
+      correo,
+      telefono,
+      horas,
+      medioContactoPreferido,
+      municipio,
+      frecuenciaRevisarRedesSociles,
+    } = this.state
 
     return (
       <Layout>
@@ -467,25 +507,45 @@ class ContactanosPage extends React.Component {
                     method="post"
                     style={{ display: 'grid', textAlign: 'left' }}
                     className="contactForm"
+                    onSubmit={this.handleSubmit}
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                   >
                     <input type="hidden" name="form-name" value="contact" />
                     <label htmlFor="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required={true} />
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      value={nombre}
+                      required={true}
+                      onChange={this.handleChange}
+                    />
                     <label htmlFor="correo">Correo electrónico</label>
-                    <input type="email" id="correo" name="correo" required={true} />
+                    <input
+                      type="email"
+                      id="correo"
+                      name="correo"
+                      value={correo}
+                      required={true}
+                      onChange={this.handleChange}
+                    />
                     <label htmlFor="telefono">Teléfono</label>
                     <input
                       type="tel"
                       id="telefono"
                       name="telefono"
+                      value={telefono}
                       placeholder="00000000"
                       pattern="[0-9]{8}"
                       required={true}
+                      onChange={this.handleChange}
                     />
                     <label htmlFor="horas">Cuántas hora semanales le puedes dedicar a este proyecto</label>
-                    <select name="horas" id="horas" required={true}>
+                    <select name="horas" value={horas} id="horas" required={true} onChange={this.handleChange}>
+                      <option disabled value="">
+                        Seleccionar
+                      </option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -528,7 +588,14 @@ class ContactanosPage extends React.Component {
                       <option value="40">40</option>
                     </select>
                     <label htmlFor="medioContactoPreferido">Forma de contacto preferida</label>
-                    <select name="medioContactoPreferido" id="medioContactoPreferido" defaultValue="" required={true}>
+                    <select
+                      name="medioContactoPreferido"
+                      value={medioContactoPreferido}
+                      id="medioContactoPreferido"
+                      defaultValue=""
+                      required={true}
+                      onChange={this.handleChange}
+                    >
                       <option disabled value="">
                         Seleccionar
                       </option>
@@ -540,9 +607,8 @@ class ContactanosPage extends React.Component {
                       name="departamento"
                       id="departamento"
                       value={this.state.value}
-                      onChange={this.handleChange}
-                      defaultValue=""
                       required={true}
+                      onChange={this.handleChange}
                     >
                       <option disabled value="">
                         Seleccionar
@@ -550,7 +616,14 @@ class ContactanosPage extends React.Component {
                       {departamentoOptions}
                     </select>
                     <label htmlFor="municipio">Municipio</label>
-                    <select name="municipio" id="municipio" defaultValue="" required={true}>
+                    <select
+                      name="municipio"
+                      value={municipio}
+                      id="municipio"
+                      defaultValue=""
+                      required={true}
+                      onChange={this.handleChange}
+                    >
                       <option disabled value="">
                         Seleccionar
                       </option>
@@ -559,9 +632,11 @@ class ContactanosPage extends React.Component {
                     <label htmlFor="frecuenciaRevisarRedesSociles">¿Qué tanto usas redes sociales?</label>
                     <select
                       name="frecuenciaRevisarRedesSociles"
+                      value={frecuenciaRevisarRedesSociles}
                       id="frecuenciaRevisarRedesSociles"
                       defaultValue=""
                       required={true}
+                      onChange={this.handleChange}
                     >
                       <option disabled value="">
                         Seleccionar
@@ -574,28 +649,56 @@ class ContactanosPage extends React.Component {
                     <label>¿Qué redes sociales usas más?</label>
                     <div style={{ marginLeft: '10px', marginBottom: '8px' }}>
                       <div>
-                        <input type="radio" id="Twitter" name="redSocialMasUsada" value="Twitter" required={true} />
+                        <input
+                          type="radio"
+                          id="Twitter"
+                          name="redSocialMasUsada"
+                          value="Twitter"
+                          required={true}
+                          onChange={this.handleChange}
+                        />
                         <label htmlFor="Twitter" style={{ marginLeft: '10px' }}>
                           Twitter
                         </label>
                         <br />
                       </div>
                       <div>
-                        <input type="radio" id="Instagram" name="redSocialMasUsada" value="Instagram" required={true} />
+                        <input
+                          type="radio"
+                          id="Instagram"
+                          name="redSocialMasUsada"
+                          value="Instagram"
+                          required={true}
+                          onChange={this.handleChange}
+                        />
                         <label htmlFor="Instagram" style={{ marginLeft: '10px' }}>
                           Instagram
                         </label>
                         <br />
                       </div>
                       <div>
-                        <input type="radio" id="Facebook" name="redSocialMasUsada" value="Facebook" required={true} />
+                        <input
+                          type="radio"
+                          id="Facebook"
+                          name="redSocialMasUsada"
+                          value="Facebook"
+                          required={true}
+                          onChange={this.handleChange}
+                        />
                         <label htmlFor="Facebook" style={{ marginLeft: '10px' }}>
                           Facebook
                         </label>
                         <br />
                       </div>
                       <div>
-                        <input type="radio" id="Whataspp" name="redSocialMasUsada" value="Whataspp" required={true} />
+                        <input
+                          type="radio"
+                          id="Whataspp"
+                          name="redSocialMasUsada"
+                          value="Whataspp"
+                          required={true}
+                          onChange={this.handleChange}
+                        />
                         <label htmlFor="Whataspp" style={{ marginLeft: '10px' }}>
                           Whataspp
                         </label>
@@ -609,6 +712,9 @@ class ContactanosPage extends React.Component {
                       </button>
                     </p>
                   </form>
+                  <h3 className="title is-size-4 is-bold">
+                    {this.state.formMessageResult ? this.state.formMessageResult : ''}
+                  </h3>
                 </div>
               </div>
             </div>

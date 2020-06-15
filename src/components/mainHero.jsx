@@ -28,20 +28,20 @@ const MainHero = () => (
               MAPA
             </a>
           </div>
-          <p className="subtitle mt-20">
+          <h3 className="subtitle mt-20 is-5">
             Vista nuestro mapa y usalo para:
             <ul className="list-circle-arrow">
               <li>Solicitar apoyo a personas de tu comunidad.</li>
               <li>Conocer quiénes necesitan ayuda cerca de donde vives.</li>
               <li>Visibilizar tu negocio u organización si ofreces servicio o atención especializada.</li>
             </ul>
-          </p>
+          </h3>
         </div>
       </div>
-      <div className="columns is-vcentered has-text-centered">
+      <div className="columns is-vcentered has-text-centered" style={{ marginTop: '30px', marginBottom: '30px' }}>
         <div className="column is-12">
-          <h3 className="title is-5 is-bold is-spaced">¿Quieres ayudarnos?</h3>
-          <h2>
+          <h1 className="title is-3 is-bold is-spaced">¿Quieres ayudarnos?</h1>
+          <h2 className="subtitle is-5 is-muted">
             ¡Inscríbete al <strong>voluntariado</strong> y ayúdanos a frenar la curva!
           </h2>
           <a href="/contactanos" className="button cta is-rounded primary-btn raised is-uppercase mt-20">
